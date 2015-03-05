@@ -1,0 +1,120 @@
+// Modules
+@import "sass/varmixins";
+@import "sass/reset";
+@import "sass/botones";
+
+.wrapper{
+	width: 50%;
+	margin: auto;
+	@include anim_transicion_ease(0.3s);
+	.logo{
+		height: 80px;
+		margin: 40px 0;
+		background:url(../img/logo.png) no-repeat center center;
+		background-size:300px;
+		@include anim_transicion_ease(0.3s);
+	}
+	h3{
+		font-size: 1.4em;
+		color:$orange;
+		text-align: center;
+		margin: 30px;
+	}
+	.buscador{ 
+		position: relative;
+		input{
+			margin-bottom: 15px;
+			border:1px solid #dbdbdb;
+			background:url(../img/ico-user.png) no-repeat 98% center, white;
+			background-size:30px;
+			&:focus{
+				border-color:$lorange;
+			}
+		}
+		div{
+			display: none;
+			position: absolute;
+			background: white;
+			width: 100%;
+			top:47px;
+			overflow: hidden;
+			border:1px solid #dbdbdb;
+			@include box_shadow(#ccc);
+			@include border_radius(3px);
+			li{
+				color:#666;
+				font-size: 0.9em;
+				padding:15px 10px;
+				border-bottom:1px solid #dbdbdb;
+				&:last-child{
+					border:none;
+				}
+				&:hover{
+					background:#efefef;
+				}
+			}
+		}
+	}
+	.inputs{
+		border:1px solid #dbdbdb;
+		background:white;
+		overflow:hidden;
+		margin-bottom: 20px;
+		@include border_radius(3px);
+		li{
+			&:after{
+				content:"";
+				display: block;
+				height: 1px;
+				border-top: 1px solid #dbdbdb;
+				width: 98%;
+				margin: auto;
+			}
+			&:last-child:after{
+				border:none;
+			}
+			&:nth-child(1) input{
+				background:url(../img/ico-building.png) no-repeat 98% center;
+				background-size:30px;
+			}
+			&:nth-child(2) input{
+				background:url(../img/ico-title.png) no-repeat 98% center;
+				background-size:30px;
+			}
+			&:nth-child(3) input{
+				background:url(../img/ico-email.png) no-repeat 98% center;
+				background-size:30px;
+			}
+			&:nth-child(4) input{
+				background:url(../img/ico-phone.png) no-repeat 98% center, white;
+				background-size:30px;
+			}
+		}
+	}
+	button{
+		background:$slblue;
+		&:hover{
+			background:$lblue;
+		}
+		&:active{
+			background:$blue;
+		}
+	}
+}
+
+@media only screen and (max-width: 1024px){
+	.wrapper{
+		font-size:0.9em;
+		width: 80%;
+	}
+}
+@media only screen and (max-width: 640px){
+	.wrapper{
+		font-size:0.8em;
+		width: 90%;
+		.logo{
+			background:url(../img/logo.png) no-repeat center center;
+			background-size:250px;
+		}
+	}
+}

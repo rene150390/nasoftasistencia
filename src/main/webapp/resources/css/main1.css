@@ -1,0 +1,127 @@
+/* Reset CSS Document */
+/* line 2, main.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, sub, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: Arial;
+  text-shadow: none;
+}
+
+/* MIXINS */
+/* line 20, main.scss */
+.logo {
+  background: url(../img/logo1.png) no-repeat;
+  width: 280px;
+  height: 58px;
+  margin: 23px auto;
+}
+
+/* line 27, main.scss */
+.box {
+  max-width: 300px;
+  background: #FFFFFF;
+  border: 1px solid #888888;
+  width: auto;
+  color: #646466;
+  margin: 0 auto 5px auto;
+  padding: 0 0 10px 0;
+  overflow: hidden;
+  border-radius: 10px !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+}
+/* line 37, main.scss */
+.box p {
+  font-size: 12px;
+}
+/* line 40, main.scss */
+.box .title {
+  background: url(../img/bg-top.png) no-repeat;
+  height: 124px;
+}
+/* line 44, main.scss */
+.box .gift {
+  overflow: hidden;
+  margin: 20px 0;
+}
+/* line 47, main.scss */
+.box .gift .gift-content {
+  width: 270px;
+  margin: 0 auto;
+}
+/* line 50, main.scss */
+.box .gift .gift-content .ico-gift {
+  background: url(../img/ico-gift.png) no-repeat;
+  width: 53px;
+  height: 60px;
+  float: left;
+  margin: 0 15px 0 20px;
+}
+/* line 57, main.scss */
+.box .gift .gift-content .text {
+  float: left;
+  margin: 15px 0 0 5px;
+}
+/* line 60, main.scss */
+.box .gift .gift-content .text h2 {
+  font-size: 18px;
+}
+/* line 62, main.scss */
+.box .gift .gift-content .text h2 span {
+  font-size: 12px;
+  display: block;
+  clear: both;
+}
+/* line 72, main.scss */
+.box .form p {
+  padding: 5px 0;
+  text-align: center;
+}
+/* line 75, main.scss */
+.box .form p span {
+  font-size: 11px;
+}
+/* line 79, main.scss */
+.box .form p.text-orange {
+  color: #ff9358;
+  font-weight: bold;
+}
+/* line 83, main.scss */
+.box .form input {
+  background: #FFFFFF;
+  width: 90%;
+  border: 1px solid #ff9358;
+  margin: 0;
+  padding: 8px 0;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+}
+
+/* RETINA */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 109, main.scss */
+  .logo {
+    background: url(../img/retina/logo.png) no-repeat;
+    background-size: 280px;
+  }
+
+  /* line 114, main.scss */
+  .box .title {
+    background: url(../img/retina/bg-top.png) no-repeat;
+    background-size: cover;
+  }
+  /* line 120, main.scss */
+  .box .gift .gift-content .ico-gift {
+    background: url(../img/retina/ico-gift.png) no-repeat;
+    background-size: 53px;
+  }
+}

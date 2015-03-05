@@ -1,0 +1,46 @@
+//VARS
+$slblue:#1289cc;
+$lblue:#057abb;
+$blue:#055c8d;
+
+$orange:#f07e30;
+$lorange:#ff9349;
+$dorange:#ee6a0f;
+
+$gray:#4e4f51;
+
+// MIXINS
+@mixin border_radius($radius: 10px) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+@mixin gradient_top_bottom($color_top: #ffffff, $color_bottom: #000000) {
+	background: $color_top !important;
+	background: -moz-linear-gradient(top, $color_top 0%, $color_bottom 100%) !important;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color_top), color-stop(100%,$color_bottom)) !important;
+	background: -webkit-linear-gradient(top, $color_top 0%,$color_bottom 100%) !important;
+	background: -o-linear-gradient(top, $color_top 0%,$color_bottom 100%) !important;
+	background: -ms-linear-gradient(top, $color_top 0%,$color_bottom 100%) !important;
+	background: linear-gradient(to bottom, $color_top 0%,$color_bottom 100%) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$color_top, endColorstr=$color_bottom,GradientType=0 ) !important;
+}
+@mixin box_shadow($shadow: rgba($color, $alpha)){
+	-moz-box-shadow: 0 2px 3px $shadow;
+	-webkit-box-shadow: 0 2px 3px $shadow;
+	box-shadow: 0 2px 3px $shadow;
+}
+@mixin anim_transicion_ease( $segundos: 0.3s ){
+	transition: all $segundos ease;
+	-ms-transition: all $segundos ease;
+	-webkit-transition: all $segundos ease;
+	-o-transition: all $segundos ease;
+	-moz-transition: all $segundos ease;
+}
+@mixin anim_transicion_linear( $segundos: 0.3s ){
+	transition: all $segundos linear;
+	-ms-transition: all $segundos linear;
+	-webkit-transition: all $segundos linear;
+	-o-transition: all $segundos linear;
+	-moz-transition: all $segundos linear;
+}

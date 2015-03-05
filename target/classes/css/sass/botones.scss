@@ -1,0 +1,32 @@
+//BOTONES e INPUTS
+button{
+	width:100%;
+	padding:20px 0;
+	margin: 0;
+	font-weight:normal;
+	text-shadow:none;
+	box-shadow:none;
+	border:none;
+	font-size:1.1em;
+	color:white;
+	@include border_radius(3px);
+	@include anim_transicion_ease(0.3s);
+	&:focus, &.ui-focus{
+		box-shadow:none;
+	}
+}
+input{
+	font-size:0.9em;
+	width:96%;
+	border:none;
+	margin: 0;
+	box-shadow:none;
+	background:white;
+	padding:14px 2%;
+	@include border_radius(3px);
+	@include anim_transicion_ease(0.3s);
+	&:focus{
+		box-shadow:none;
+		outline: none;
+	}
+}
