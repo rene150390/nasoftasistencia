@@ -141,7 +141,7 @@ function call_ws(type, url, data, response, onError){
     }
     $.ajax({
         type: type,
-        url: 'http://54.193.182.168:8980/AGSNasoftAsistencia/' + url,
+        url: 'http://localhost:8080/AGSNasoftAsistencia/' + url,
         data: data,
         dataType: 'json',
         contentType: "application/json",

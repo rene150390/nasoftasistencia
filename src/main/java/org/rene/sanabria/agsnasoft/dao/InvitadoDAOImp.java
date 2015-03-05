@@ -27,8 +27,8 @@ public class InvitadoDAOImp implements InvitadoDAO{
 	public void updateInvitado(Invitado inv){
 		this.sessionFactory.getCurrentSession().createQuery("update Invitado set"
     			+ " empresa = '"+inv.getEmpresa()+"', puesto = '"+inv.getPuesto()+"', email ='"+inv.getEmail()+"', "
-    					+ " tel='"+inv.getTel()+"' where nombre='"
-    			+inv.getNombre()+"'" ).executeUpdate();
+    					+ " tel='"+inv.getTel()+"' where email='"
+    			+inv.getEmail()+"'" ).executeUpdate();
 	}
 
 }

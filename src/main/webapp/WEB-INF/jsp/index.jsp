@@ -23,7 +23,7 @@
                 <li><i></i>Entretenimiento</li>
                 <li><i></i>Redes sociales</li>
             </ul>-->
-            <form action="register" method="post">
+            
 	            <h3>Verifica la asistencia o da de alta a los invitados</h3>
 	           <div class="buscador">
                 <div>
@@ -45,7 +45,7 @@
                 	<li><input id="phone" type="text" placeholder="Teléfono" required></li>
             	</ul>
 	            <button onclick="sendUserData()">Activa tu regalo</button>
-	        </form>
+	      
         </div>
 
         <script src="<c:url value="/resources/js/jquery-min.js" />"></script>
