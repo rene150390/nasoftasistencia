@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class MainController {
 	@Autowired InvitadoDataService invitadoService;
 
-	@RequestMapping(value="/register", method=RequestMethod.POST)
+	/*@RequestMapping(value="/register", method=RequestMethod.POST)
 	public String registerWeb(@RequestParam("nombre") String nombre, @RequestParam("empresa") String empresa,
 			@RequestParam("puesto") String puesto,
 			@RequestParam("email") String email,
@@ -30,10 +30,11 @@ public class MainController {
 		Invitado inv = new Invitado(nombre, empresa, puesto, email, tel, id1, "si");
 		invitadoService.addInvitado(inv);
 		return "registroOk";
-	}
+	}*/
 	@RequestMapping(value="/registerws", method=RequestMethod.POST)
 	public @ResponseBody String registerService(@RequestBody Invitado inv) {
 		List<Invitado> listaExists = invitadoService.getInvitadoByNombre(inv.getNombre());
+		
 		if(listaExists.isEmpty())
 			invitadoService.addInvitado(inv);
 		invitadoService.updateInvitado(inv);

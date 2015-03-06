@@ -24,7 +24,17 @@ public class InvitadoDAOImp implements InvitadoDAO{
 	public List<Invitado> getInvitadoByNombre(String nombre){
 		return this.sessionFactory.getCurrentSession().createQuery("from Invitado I where I.nombre='"+nombre+"'").list();
 	}
+	@SuppressWarnings("unchecked")
+	public List<Invitado> getInvitadoByMail(String email){
+		return this.sessionFactory.getCurrentSession().createQuery("from Invitado I where I.email='"+email+"'").list();
+	}
 	public void updateInvitado(Invitado inv){
+		this.sessionFactory.getCurrentSession().createQuery("update Invitado set"
+    			+ " empresa = '"+inv.getEmpresa()+"', puesto = '"+inv.getPuesto()+"', email ='"+inv.getEmail()+"', "
+    					+ " tel='"+inv.getTel()+"' where nombre='"
+    			+inv.getNombre()+"'" ).executeUpdate();
+	}
+	public void updateInvitadoByEmail(Invitado inv){
 		this.sessionFactory.getCurrentSession().createQuery("update Invitado set"
     			+ " empresa = '"+inv.getEmpresa()+"', puesto = '"+inv.getPuesto()+"', email ='"+inv.getEmail()+"', "
     					+ " tel='"+inv.getTel()+"' where email='"

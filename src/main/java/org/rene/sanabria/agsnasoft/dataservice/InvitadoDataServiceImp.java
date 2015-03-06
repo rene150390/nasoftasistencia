@@ -32,6 +32,14 @@ public class InvitadoDataServiceImp implements InvitadoDataService{
 	public void updateInvitado(Invitado inv) {
 		invitadoDAO.updateInvitado(inv);
 	}
+	@Transactional
+	public List<Invitado> getInvitadoByMail(String email){
+		return invitadoDAO.getInvitadoByMail(email);
+	}
+	@Transactional
+	public void updateInvitadoByEmail(Invitado inv){
+		invitadoDAO.updateInvitado(inv);
+	}
 	
 
 }

@@ -11,4 +11,6 @@ public interface InvitadoDAO {
 	 public List<Invitado> getInvitados(String parametro);
 	 public List<Invitado> getInvitadoByNombre(String nombre);
 	 public void updateInvitado(Invitado inv);
+	 public List<Invitado> getInvitadoByMail(String email);
+	 public void updateInvitadoByEmail(Invitado inv);
 }
